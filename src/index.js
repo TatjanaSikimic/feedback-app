@@ -1,17 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import "./index.css"
+import App from './App'
+import { createRoot } from 'react-dom/client';
+// Strict Mode is sort of a helper component that will help you write better React components, you can wrap a set of components with <StrictMode /> and it'll basically:
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// 1. Verify that the components inside are following some of the recommended practices and warn you if not in the console.
+// 2. Verify the deprecated methods are not being used, and if they're used strict mode will warn you in the console.
+// 3. Help you prevent some side effects by identifying potential risks.
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//ReactDOM.createRoot(
+    const root = createRoot(document.getElementById('root'))
+    root.render(
+    <React.StrictMode>
+        <App/>
+    </React.StrictMode>)
+    
